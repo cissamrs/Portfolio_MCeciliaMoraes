@@ -216,3 +216,80 @@ a {
   color: #457e24;
   font-size: 0.9rem;
 }
+.projetos-card {
+  display: grid;
+  /* 3 colunas para desktop */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.projetos-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s;
+}
+
+.projetos-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-projeto {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #b94b0b;
+  margin-bottom: 8px;
+}
+
+.descricao-projeto {
+  font-size: 1rem;
+  color: #666666;
+  margin-bottom: 16px;
+}
+
+.tech {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #8d6e63;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.caixa-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tech-tag {
+  background-color: #f7f3ed;
+  color: #333333;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.resultado-projeto {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #4caf50; /* Verde para destaque de resultado */
+  margin-top: auto; /* Empurra para o final do card */
+  padding-top: 20px;
+}
+
+.link-projeto {
+  display: block;
+  text-align: right;
+  font-weight: 600;
+  color: #8d6e63;
+  margin-top: 8px;
+}

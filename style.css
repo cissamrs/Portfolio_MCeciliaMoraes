@@ -1,113 +1,120 @@
-body {
-  font-family: "Inter", sans-serif;
-  color: #333333;
-  background-color: #fcf6f3; 
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #070000;
+  background-color: #e8f0e5a9;
   line-height: 1.6;
+}
+
+/* Container principal para centralizar conteúdo */
+.section-padding {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
 }
 
 a {
   text-decoration: none;
-  color: #0f0f0f;
+  color: #666;
   transition: color 0.3s;
 }
 
-a:hover {
-  color: #8edb9f;
-}
-
-.indice {
+.header {
   position: sticky;
   top: 0;
-  z-index: 10;
-  background-color: #ffffff; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  padding: 15px 20px;
+  background-color: #fff;
 }
 
-.nome-destaque {
+.header-container {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px 20px;
 }
 
 .logo {
-  font-size: 20px;
-  font-weight: 600;
-  color:#459757; 
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #5d7253;
 }
 
 .menu a {
   margin-left: 25px;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-weight: 500;
   padding-bottom: 5px;
 }
 
-.menu a.active {
-  color:#8edb9;
-  border-bottom: 2px solid #8edb9;
-  font-weight: 700;
-}
-
-
 .apresentacao {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 80px 20px;
   display: flex;
   align-items: center;
   gap: 50px;
+  min-height: 70vh; /* Garante que ocupe um bom espaço na tela */
 }
 
-.texto-apresentacao {
-  flex: 2;
+.apresentacao-conteudo {
+  flex: 2; /* Ocupa 2/3 do espaço */
+}
+
+.ilustracao-container {
+  flex: 1; /* Ocupa 1/3 do espaço */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ilustracao-perfil {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 10px 20px #5d7253;
 }
 
 .nome {
-  font-size: 50px;
+  font-size: 3rem;
   font-weight: 800;
-  color: ##8edb9f; /* Cor primária (Laranja) */
-  margin-bottom: 10px;
+  color: #b94b0b;
+  margin-bottom: 0.5rem;
 }
 
 .endereco {
-  display: flex;
-  align-items: center;
-  font-size: 20px;
-  margin-bottom: 30px;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: #585857f6;
 }
 
-.texto-apresentacao p {
-  font-size: 18px;
-  margin-bottom: 25px;
+.apresentacao-conteudo p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-
-.botao {
+.botao-grupo {
   display: flex;
-  gap: 20px;
-  margin-top: 40px;
+  gap: 15px;
+  margin-top: 30px;
 }
 
-.botao button {
-  display: flex;
-  align-items: center;
-  padding: 12px 30px;
+.botao-grupo button {
+  padding: 10px 25px;
   font-weight: 600;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  gap: 8px; 
+  border: 2px solid transparent;
 }
 
 .botao-contato {
-  background-color: #8edb9f; 
-  color: #0a0909; /* Branco */
-  box-shadow: 0 5px 15px rgba(233, 125, 60, 0.3);
+  background-color: #5d7253;
+  color: #fff;
+  border-color: #666;
 }
 
 .botao-contato:hover {
@@ -116,25 +123,96 @@ a:hover {
 }
 
 .botao-curriculo {
-  background-color: transparent;
-  color: #1a1f1b
-  border: 2px solid #8edb9f;
+  background-color: #fff;
+  color: #2b2a2a;
+  border-color: #666;
 }
 
 .botao-curriculo:hover {
-  background-color: #8edb9f                         
-  color: #ffffff; 
-  transform: scale(1.02);
+  background-color: #b94b0b;
+  color: #5d7253;
 }
 
-.ilustracao {
-  width: 350px;
-  height: 350px;
-  border-radius: 50%;
-  border: 1px solid rgba(233, 125, 60, 0.2); /* Borda interna fina */
+/* === SEÇÃO 2: FORMAÇÃO ACADÊMICA === */
+
+.section-title {
   display: flex;
-  justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #5d7253;
+  text-align: center;
 }
 
+.educacao-card {
+  background-color: #fff;
+  border: 1px solid #666;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px #457e24;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
 
+.educacao-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.detalhes-card {
+  flex-grow: 1;
+  padding-right: 20px;
+}
+
+.detalhes-card p {
+  margin: 0;
+  padding: 2px 0;
+}
+
+.titulo-do-curso {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #b94b0b;
+  margin-bottom: 5px;
+}
+
+.instituicao,
+.nivel,
+.duracao {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Tags de Status */
+.status {
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+  text-transform: uppercase;
+  align-self: center; /* Centraliza verticalmente no flex container */
+}
+
+.status-em-andamento {
+  background-color: #fff;
+  color: #ecd71a;
+}
+
+.status-concluido {
+  background-color: #fff;
+  color: #666;
+}
+
+/* === RODAPÉ === */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #d9ecd0;
+  color: #457e24;
+  font-size: 0.9rem;
+}

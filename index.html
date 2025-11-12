@@ -5,20 +5,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maria Cecília de Moraes - Portfólio</title>
+  <!-- O link para o CSS externo, conforme solicitado -->
   <link rel="stylesheet" href="style.css">
+  <!-- Link para a fonte Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header class="indice">
-    <div class="nome-destaque">
+  <!-- CABEÇALHO / ÍNDICE -->
+  <header class="header">
+    <div class="header-container">
+      <!-- Seu nome ou logo ficaria aqui -->
       <div class="logo">
         Maria Cecília de Moraes
       </div>
 
       <nav class="menu">
-        <a href="#">Introdução</a>
-        <a href="#">Currículo</a>
-        <a href="#" class="active">Projetos</a> <!-- Link ativo -->
+        <a href="#introducao">Introdução</a>
+        <a href="#formacao-academica">Formação Acadêmica</a>
+        <a href="#">Projetos</a>
         <a href="#">Habilidades</a>
         <a href="#">Certificações</a>
         <a href="#">Contato</a>
@@ -27,9 +32,10 @@
   </header>
 
   <main>
-    <div class="apresentacao">
+    <!-- SEÇÃO 1: INTRODUÇÃO/APRESENTAÇÃO -->
+    <section id="introducao" class="apresentacao section-padding">
 
-      <section class="texto-apresentacao">
+      <div class="apresentacao-conteudo">
         <h1 class="nome">
           Olá! Eu sou a Maria Cecília!
         </h1>
@@ -45,7 +51,7 @@
         </p>
 
         <!-- Botões -->
-        <div class="botao">
+        <div class="botao-grupo">
           <button class="botao-contato">
             Entre em Contato
           </button>
@@ -54,94 +60,99 @@
             Download CV
           </button>
         </div>
-      </section>
+      </div>
 
-      <!-- imagem/ilustração -->
-      <section class="ilustracao pessoal">
-        <div class="ilustracao">
+      <!-- Imagem/Ilustração (Lado Direito) -->
+      <div class="ilustracao-container">
+        <!-- Certifique-se de que o caminho da imagem está correto no seu projeto -->
+        <img src="ilustraçãoport.png" alt="Ilustração de Maria Cecília" class="ilustracao-perfil">
+      </div>
 
-          <img src="/imagens/ChatGPT Image 1 de nov. de 2025, 07_37_41.png" alt="Ilustração de Maria Cecília" class="ilustracao">
+    </section>
 
+    <!-- SEÇÃO 2: FORMAÇÃO ACADÊMICA -->
+    <section id="formacao-academica" class="section-padding">
+
+      <!-- Título da Seção -->
+      <h2 class="section-title">
+        Formação Acadêmica
+      </h2>
+
+      <!-- Card 1: Em Andamento (Tecnólogo) -->
+      <div class="educacao-card">
+        <div class="detalhes-card">
+          <p class="titulo-do-curso">Análise e Desenvolvimento de Sistemas</p>
+          <p class="instituicao">Fatec São Jose dos Campos</p>
+          <p class="nivel">Tecnólogo</p>
+          <p class="duracao">2025 - 2028</p>
         </div>
-      </section>
-    </div>
+        <span class="status-em-andamento">Em andamento</span>
+      </div>
 
-    <div class="academico">
+      <!-- Card 2: Em Andamento (Pós-graduação) -->
+      <div class="educacao-card">
+        <div class="detalhes-card">
+          <p class="titulo-do-curso">Direito Digital</p>
+          <p class="instituicao">INSTITUTO DE TECNOLOGIA E SOCIEDADE - UERJ</p>
+          <p class="nivel">Pós-graduação lato sensu</p>
+          <p class="duracao">2025 - 2027</p>
+        </div>
+        <span class="status-em-andamento">Em andamento</span>
+      </div>
 
-      <section id="formacao-academica" class="section-container">
+      <!-- Card 3: Concluído (Pós-graduação) -->
+      <div class="educacao-card">
+        <div class="detalhes-card">
+          <p class="titulo-do-curso">Advocacia Cível</p>
+          <p class="instituicao">FMP - Fundação Escola Superior do Ministério Público.</p>
+          <p class="nivel">Pós-graduação lato sensu</p>
+          <p class="duracao">2013 - 2017</p>
+        </div>
+        <span class="status-concluido">Concluído</span>
+      </div>
 
-        < <h2 class="section-title">
+      <!-- Card 4: Concluído (Graduação) -->
+      <div class="educacao-card">
+        <div class="detalhes-card">
+          <p class="titulo-do-curso">Bacharel em Direito</p>
+          <p class="instituicao">UNISAL Lorena</p>
+          <p class="nivel">Graduação</p>
+          <p class="duracao">2013 - 2017</p>
+        </div>
+        <span class="status-concluido">Concluído</span>
+      </div>
 
-          Formação Acadêmica
-          </h2>
+      <!-- Card 5: Concluído (Técnico) -->
+      <div class="educacao-card">
+        <div class="detalhes-card">
+          <p class="titulo-do-curso">Técnico em Administração.</p>
+          <p class="instituicao">Etec Cruzeiro</p>
+          <p class="nivel">Curso técnico</p>
+          <p class="duracao">2011 - 2012</p>
+        </div>
+        <span class="status-concluido">Concluído</span>
+      </div>
 
-          <!-- Modelo Em Andamento -->
-          <div class="educacao-card">
-            <div class="detalhes-card">
-              <p class="titulo-do-curso">Análise e Desenvolvimento de Sistemas</p>
-              <p class="instituicao">Fatec São Jose dos Campos</p>
-              <P class="nivel"> Tecnólogo
-              <p class="duracao">2025 - 2028</p>
-            </div>
-            <span class="status">Em andamento</span>
-          </div>
+      <!-- Card 6: Concluído (Ensino Médio + Técnico) -->
+      <div class="educacao-card">
+        <div class="detalhes-card">
+          <p class="titulo-do-curso">Ensino Médio integrado ao técnico em química</p>
+          <p class="instituicao">Colégio Técnico de Lorena/USP</p>
+          <p class="nivel">Ensino Médio</p>
+          <p class="duracao">2008 - 2012</p>
+        </div>
+        <span class="status-concluido">Concluído</span>
+      </div>
 
-          <div class="educacao-card">
-            <div class="detalhes-card">
-              <p class="titulo-do-curso">Direito Digital</p>
-              <p class="instituicao">INSTITUTO DE TECNOLOGIA E SOCIEDADE - UERJ</p>
-              <P class="nivel"> Pós-graduação lato sensu
-              <p class="duracao">2025 - 2027</p>
-            </div>
-            <span class="status">Em andamento</span>
-          </div>
+    </section>
+    <!-- FIM DA SEÇÃO FORMAÇÃO ACADÊMICA -->
 
-          <!-- Modelo Concluído -->
-          <div class="educacao-card">
-            <div class="detalhes-card">
-              <p class="titulo-do-curso"> Advocacia Cível</p>
-              <p class="instituicao"> FMP - Fundação Escola Superior do Ministério Público.</p>
-              <P class="nivel"> Pós-graduação lato sensu
-              <p class="duracao">2013 - 2017</p>
-            </div>
-            <span class="status">Concluído</span>
-          </div>
-
-          <div class="educacao-card">
-            <div class="detalhes-card">
-              <p class="titulo-do-curso">Bacharel em Direito</p>
-              <p class="instituicao"> UNISAL Lorena</p>
-              <P class="nivel"> Graduação
-              <p class="duracao">2013 - 2017</p>
-            </div>
-            <span class="status">Concluído</span>
-
-            <div class="educacao-card">
-              <div class="detalhes-card">
-                <p class="titulo-do-curso">Técnico em Administração.</p>
-                <p class="instituicao"> Etec Cruzeiro</p>
-                <P class="nivel"> Curso técnico
-                <p class="duracao">2011 - 2012</p>
-              </div>
-              <span class="status">Concluído</span>
-
-              <div class="educacao-card">
-                <div class="detalhes-card">
-                  <p class="titulo-do-curso">Ensino Médio integrado ao técnico em química </p>
-                  <p class="instituicao"> Colégio Técnico de Lorena/USP </p>
-                  <P class="nivel"> Ensino Médio
-                  <p class="duracao">2008 - 2012</p>
-                </div>
-                <span class="status">Concluído</span>
-              </div>
-            </div>
-      </section>
-    </div>
   </main>
 
-
-
-
+  <!-- Você pode adicionar um rodapé aqui se desejar -->
+  <footer class="footer">
+    <p>&copy; 2025 Maria Cecília de Moraes. Todos os direitos reservados.</p>
+  </footer>
 </body>
 
 </html>

@@ -51,16 +51,20 @@ a {
   padding-bottom: 5px;
 }
 
-.apresentacao {
+.artigos {
   display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
   align-items: center;
   gap: 50px;
   min-height: 70vh;
   padding: 60px 20px;
+  text-align: justify;
 }
 
 .apresentacao-conteudo {
   flex: 2;
+  max-width: 700px;
 }
 
 .ilustracao-conteudo {
@@ -108,12 +112,12 @@ a {
   background-color: #fff;
   border: 1px solid #666;
   border-radius: 12px;
-  padding: 10px;
-  margin-bottom: 20px;
+  padding: 10px; /* Manter ou reduzir se necessário */
+  margin-bottom: 10px; /* Reduzir a margem inferior */
   box-shadow: 0 2px 6px #457e24;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center; /* Alterar de flex-start para center */
   transition: 0.3s ease;
 }
 
@@ -121,28 +125,57 @@ a {
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
-
 .detalhes-card {
   flex-grow: 1;
-  padding-right: 20px;
+  padding-right: 10px; /* Reduzir */
+}
+
+.titulo-do-curso,
+.instituicao {
+  grid-column: 1 / 3; /* Ocupa as duas colunas */
 }
 
 .detalhes-card p {
-  padding: 2px 0;
+  padding: 0; /* Remover padding vertical */
+  margin: 0;
 }
 
 .titulo-do-curso {
-  font-size: 20px;
+  font-size: 18px; /* Reduzir a fonte */
   font-weight: 600;
   color: #b94b0b;
-  margin-bottom: 5px;
+  margin-bottom: 2px; /* Reduzir a margem inferior */
 }
 
 .status-em-andamento {
   color: #33c03a;
+  border: 1px solid #33c03a;
 }
 
 .status-concluido {
+  color: #666;
+  border: 1px solid #ccc;
+}
+
+.status-em-andamento,
+.status-concluido {
+  font-size: 14px; /* Opcional: reduzir a fonte */
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.instituicao {
+  font-size: 14px; /* Opcional: reduzir a fonte */
+  color: #5d7253; /* Opcional: cor */
+  margin-bottom: 2px;
+}
+
+.nivel,
+.duracao {
+  font-size: 14px; /* Opcional: reduzir a fonte */
+  display: inline-block;
+  margin-right: 10px; /* Adiciona espaço entre eles */
   color: #666;
 }
 
@@ -154,10 +187,17 @@ a {
   margin-bottom: 30px;
 }
 
+.secao {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
 .projetos-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .projetos-card {
@@ -220,6 +260,92 @@ a {
   color: #8d6e63;
 }
 
+/* --- Estilos para a Seção de Artigos e Pesquisas --- */
+
+.introducao-artigos {
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #5d7253;
+}
+
+.artigos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.artigo-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+  border: 1px solid #d9ecd0;
+}
+
+.artigo-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-artigo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #b94b0b;
+  margin-bottom: 10px;
+}
+
+.data-artigo {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.resumo-artigo {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.links-artigo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.link-download,
+.link-leitura {
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  color: #457e24; /* Cor verde do seu rodapé */
+}
+
+/* Adicione um ícone para o botão de download (você precisará ter este SVG ou PNG) */
+.link-download::before {
+  content: ""; /* No seu código real, você pode substituir por um SVG de download */
+  /* Imagem de exemplo: url('caminho/para/download-icon.svg') */
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin-right: 5px;
+  /* Se você tiver um ícone real, use background-image aqui */
+}
+
+.link-leitura {
+  color: #b94b0b; /* Cor laranja de destaque */
+}
+
 .certificacoes {
   background-color: #e8f0e5a9;
   padding: 40px 0;
@@ -269,10 +395,10 @@ a {
 
 .habilidades {
   display: flex;
-  gap: 30px;
-  max-width: 1100px;
+  gap: 15px;
+  max-width: 750px;
   margin: auto;
-  padding: 30px;
+  padding: 15px;
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
@@ -283,9 +409,9 @@ a {
 }
 
 .habilidades-bloco h3 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
 }
@@ -293,36 +419,38 @@ a {
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 8px;
 }
 
 .hard-skills,
 .soft-skills {
-  min-height: 100px;
-  padding: 20px;
+  min-height: 60px;
+  padding: 8px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-size: 0, 8rem;
 }
 
 .hard-skills {
-  background-color: #fff6ed;
-  border: 1px solid #f9e2cd;
+  background-color: #ffffff;
+  border: 1px solid #b94b0b;
   color: #b94b0b;
 }
 
 .soft-skills {
-  background-color: #edf7ed;
-  border: 1px solid #d4e8d4;
+  background-color: #ffffff;
+  border: 1px solid #2e5c2e;
   color: #2e5c2e;
 }
 
 .icone-skills,
 .skill-icon {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 2px;
 }
 
 .secao-contato {

@@ -52,14 +52,11 @@ a {
 }
 
 .artigos {
-  display: flex;
+  /* Estes são os estilos corretos para a SEÇÃO DE ARTIGOS (que é uma listagem em grid) */
+  text-align: justify;
   max-width: 1200px;
   margin: 0 auto;
-  align-items: center;
-  gap: 50px;
-  min-height: 70vh;
   padding: 60px 20px;
-  text-align: justify;
 }
 
 .apresentacao-conteudo {
@@ -97,7 +94,18 @@ a {
 
 .apresentacao-conteudo p {
   font-size: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+.apresentacao {
+  /* ESTES SÃO OS ESTILOS PARA INTRODUÇÃO (TEXTO E IMAGEM LADO A LADO) */
+  display: flex; /* ATIVA O ALINHAMENTO LADO A LADO */
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  gap: 50px;
+  min-height: 70vh;
+  padding: 60px 20px;
+  text-align: justify;
 }
 
 .titulo-formação {
@@ -273,7 +281,7 @@ a {
 
 .artigos-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 30px;
   max-width: 1000px;
   margin: 0 auto;

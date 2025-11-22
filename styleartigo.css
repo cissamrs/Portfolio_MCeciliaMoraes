@@ -5,27 +5,27 @@ body {
   line-height: 1.6;
 }
 
-/* Container do Artigo para centralização e margem de leitura */
+/* Container */
 .artigo-container {
-  max-width: 900px; /* Define uma largura máxima para leitura */
-  margin: 0 auto; /* Centraliza o bloco na página */
-  padding: 40px 20px; /* Adiciona padding interno */
-  background-color: #fff; /* Fundo branco para a área do texto */
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #fff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
 
-/* Título Principal (Cor Laranja de Destaque) */
+/* Título */
 .titulo-artigo {
   font-size: 3rem;
   font-weight: 800;
-  color: #b94b0b; /* Cor do seu nome em destaque */
+  color: #b94b0b;
   text-align: center;
   margin-bottom: 0.5rem;
   line-height: 1.2;
 }
 
-/* Nome da Autora */
+/* Autor */
 .autor-artigo {
   text-align: center;
   font-size: 1.1rem;
@@ -35,24 +35,26 @@ body {
   border-bottom: 1px solid #ccc;
 }
 
-/* Subtítulos de Seção (Cor Verde) */
+/* Subtítulos das seções */
 .subtitulo-artigo-secao {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #5d7253; /* Cor verde para subtítulos */
+  color: #5d7253;
   margin-top: 25px;
   margin-bottom: 15px;
 }
 
-/* Justificando todos os Parágrafos */
-.paragrafo-justificado {
+/* Parágrafos */
+.artigo-container .paragrafo-justificado {
   font-size: 1rem;
   font-weight: 500;
-  text-align: justify; /* Aplica o alinhamento justificado */
-  margin-bottom: 2rem;
+  text-align: justify;
+  margin-bottom: 38px;
+  text-indent: 2em;
+  line-height: 1.85;
 }
 
-/* Estilo para o Sumário (opcional) */
+/* Sumário */
 .lista-sumario {
   margin-bottom: 20px;
   line-height: 1.8;
@@ -60,4 +62,26 @@ body {
 
 .lista-sumario p {
   text-align: left;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .artigo-container {
+    padding: 30px 20px;
+  }
+
+  .titulo-artigo {
+    font-size: 2.2rem;
+  }
+
+  .subtitulo-artigo-secao {
+    font-size: 1.35rem;
+  }
+
+  .artigo-container .paragrafo-justificado {
+    font-size: 1rem;
+    margin-bottom: 32px;
+    text-indent: 1.5em;
+    line-height: 1.9;
+  }
 }

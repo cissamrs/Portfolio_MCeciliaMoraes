@@ -52,7 +52,6 @@ a {
 }
 
 .artigos {
-  /* Estes são os estilos corretos para a SEÇÃO DE ARTIGOS (que é uma listagem em grid) */
   text-align: justify;
   max-width: 1200px;
   margin: 0 auto;
@@ -80,14 +79,14 @@ a {
 }
 
 .nome {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 800;
   color: #b94b0b;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.1rem;
 }
 
 .endereco {
-  font-size: 1.25rem;
+  font-size: 1rem;
   margin-bottom: 2rem;
   color: #585857f6;
 }
@@ -97,14 +96,12 @@ a {
   margin-bottom: 2rem;
 }
 .apresentacao {
-  /* ESTES SÃO OS ESTILOS PARA INTRODUÇÃO (TEXTO E IMAGEM LADO A LADO) */
-  display: flex; /* ATIVA O ALINHAMENTO LADO A LADO */
-  max-width: 1200px;
+  display: flex;
+  max-width: 1000px;
   margin: 0 auto;
   align-items: center;
   gap: 50px;
-  min-height: 70vh;
-  padding: 60px 20px;
+  padding: 30px 20px 40px;
   text-align: justify;
 }
 
@@ -206,6 +203,7 @@ a {
   gap: 30px;
   max-width: 900px;
   margin: 0 auto;
+  margin-bottom: 15px;
 }
 
 .projetos-card {
@@ -229,24 +227,26 @@ a {
   font-weight: 700;
   color: #b94b0b;
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .descricao-projeto {
   color: #666;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  text-align: justify;
 }
 
 .tech {
   font-size: 15px;
   font-weight: 700;
   color: #8d6e63;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .caixa-tech {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 7px;
 }
 
 .tech-tag {
@@ -259,16 +259,17 @@ a {
   font-style: italic;
   font-size: 0.9rem;
   color: #4caf50;
-  margin-top: auto;
+  margin-top: 30px;
+  text-align: justify;
 }
 
 .link-projeto {
   text-align: right;
   font-weight: 600;
   color: #8d6e63;
+  margin-top: 30px;
+  display: inline-block;
 }
-
-/* --- Estilos para a Seção de Artigos e Pesquisas --- */
 
 .introducao-artigos {
   text-align: center;
@@ -339,19 +340,16 @@ a {
   color: #457e24; /* Cor verde do seu rodapé */
 }
 
-/* Adicione um ícone para o botão de download (você precisará ter este SVG ou PNG) */
 .link-download::before {
-  content: ""; /* No seu código real, você pode substituir por um SVG de download */
-  /* Imagem de exemplo: url('caminho/para/download-icon.svg') */
+  content: "";
   width: 15px;
   height: 15px;
   display: inline-block;
   margin-right: 5px;
-  /* Se você tiver um ícone real, use background-image aqui */
 }
 
 .link-leitura {
-  color: #b94b0b; /* Cor laranja de destaque */
+  color: #b94b0b;
 }
 
 .certificacoes {
@@ -369,10 +367,14 @@ a {
 
 .certificacoes-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Essa linha garante 3 colunas iguais */
   gap: 30px;
   max-width: 1000px;
   margin: auto;
+  align-items: stretch; /* Garante que todos os itens do grid tenham a mesma altura */
 }
 
 .certificado-card {
@@ -381,6 +383,10 @@ a {
   padding: 25px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .titulo-certificado {
@@ -388,6 +394,22 @@ a {
   font-weight: 600;
 }
 
+/* REGRA .certificado-container CORRIGIDA */
+.certificado-container {
+  display: inline-block;
+  margin: 15px 0 0;
+}
+
+.certificado-miniatura {
+  width: 150px;
+  height: 120px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  display: block;
+}
 .habilidades-secao {
   padding: 50px 20px;
   background-color: #e8f0e5a9;

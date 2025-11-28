@@ -1,7 +1,7 @@
 body {
   font-family: "Inter", sans-serif;
   color: #070000;
-  /* Fundo da tela mais claro e sutil (como um papel de parede) */
+
   background-color: #e6e6e6;
   line-height: 1.6;
 }
@@ -46,19 +46,17 @@ a {
   padding-bottom: 5px;
 }
 
-/* 1. CENTRALIZAÇÃO E PROFUNDIDADE (artigo-container) */
 .artigo-container {
   max-width: 900px;
-  /* Margem superior maior (80px) para afastar do menu fixo, e 60px na inferior */
+
   margin: 80px auto 60px auto;
   padding: 40px 30px;
   background-color: #fff;
-  /* Sombra mais intensa para dar MAIOR profundidade e destacar as laterais */
+
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
 }
 
-/* 2. MAIOR DESTAQUE PARA O TÍTULO (titulo-artigo) */
 .titulo-artigo {
   font-size: 2rem;
   font-weight: 900;
@@ -69,7 +67,6 @@ a {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-/* Autor */
 .autor-artigo {
   text-align: center;
   font-size: 1.1rem;
@@ -79,7 +76,6 @@ a {
   border-bottom: 2px solid #ddd;
 }
 
-/* 3. SUBTÍTULOS (subtitulo-artigo-secao) */
 .subtitulo-artigo-secao {
   font-size: 1.56rem;
   font-weight: 700;
@@ -90,7 +86,6 @@ a {
   padding-left: 10px;
 }
 
-/* 4. ESPAÇAMENTO ENTRE PARÁGRAFOS (paragrafo-justificado) */
 .paragrafo-justificado {
   /* Reduz o espaçamento interno do parágrafo */
   line-height: 1.6;
@@ -100,7 +95,6 @@ a {
   text-indent: 2em;
 }
 
-/* Sumário */
 .lista-sumario {
   margin-bottom: 30px;
   line-height: 2;
@@ -111,7 +105,6 @@ a {
   text-align: left;
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
   .titulo-artigo {
     font-size: 2.5rem;
